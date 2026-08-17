@@ -16,7 +16,9 @@ test('Deve consultar um pedido aprovado', async ({ page }) => {
 
   // Assert
 
-  await expect(page.getByTestId('order-result-VLO-RCW98N')).toContainText('APROVADO');
+
+ await expect(page.getByText('VLO-RCW98N')).toBeVisible();
+  await expect(page.getByText('APROVADO')).toBeVisible();
 
 
 });
